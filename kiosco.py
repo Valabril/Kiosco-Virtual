@@ -79,12 +79,26 @@ def organizar_carrito():
         carrito[j + 1] = actual
     print("Carrito organizado.\n")
 
-# Función inicial del menú principal
-def main(comando):
-    print('Bienvenido al kiosco virtual.')
+def main():
+    while True:
+        print("\n--- Menú Principal ---")
+        print("1. Ver productos y agregar al carrito")
+        print("2. Ver carrito de compras")
+        print("3. Salir")
+        opcion = input("Seleccioná una opción: ")
 
-# Iniciando la función main
-main(comando)
+        if opcion == "1":
+            lista_productos()
+        elif opcion == "2":
+            ver_carrito()
+        elif opcion == "3":
+            print("¡Gracias por usar el kiosco virtual!")
+            break
+        else:
+            print("Opción no válida. Intentá de nuevo.")
+
+main()
+
 
 lista_productos()
 ver_carrito()
